@@ -10,7 +10,7 @@ layout: default
   </div>
 
   {% if post.tags.size > 0 %}
-    {% capture tags_content %} with <span class="icon-price-tag{% if post.tags.size > 1 %}s{% endif %}"></span>: {% endcapture %}
+    {% capture tags_content %} Tags <span class="icon-price-tag{% if post.tags.size > 1 %}s{% endif %}"></span>: {% endcapture %}
     {% for post_tag in post.tags %}
       {% assign tag = site.my_tags | where: "slug", post_tag %}
       {% if tag %}
@@ -22,7 +22,7 @@ layout: default
   {% endif %}
   
   <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
+    Written on {{ page.date | date: "%B %e, %Y" }} {{ tags_content }}
   </div>
 
   {% include disqus.html %}

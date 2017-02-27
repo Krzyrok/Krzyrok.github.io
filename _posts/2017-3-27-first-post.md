@@ -2,7 +2,7 @@
 layout: post
 title: First testing post!
 categories: category1 category2-test
-tags: tag1 tag2-test
+tags: [tag1 tag2-test]
 ---
 
 My first post
